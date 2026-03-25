@@ -35,3 +35,28 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack and Heap memory
+
+// Primitive data types are stored in stack memory and reference data types are stored in heap memory.
+
+// let myName = "Rehmat"
+// let anotherName = myName
+// anotherName = "Waleed"
+
+// console.log(anotherName);
+// console.log(myName);
+
+
+let userOne = {
+    name: "Rehmat",
+    age: 22,
+}
+let userTwo = userOne
+userTwo.name = "Waleed"
+
+console.log(userOne.name);
+console.log(userTwo.name);
