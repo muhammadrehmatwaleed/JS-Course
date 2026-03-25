@@ -246,3 +246,45 @@
 
 
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack and Heap memory
+
+// let a = 10;
+// let b = a;
+
+// b = 20;
+
+// console.log(a); // 10
+// console.log(b); // 20
+
+// let x = {value: 10};
+// let y = x;
+// y.value = 20;
+
+// console.log(x.value);
+
+
+
+// let k= { x: 1 };
+// let l = { x: 1 };
+
+// console.log(k === l); // ? // false because k and l are two different objects in memory, even though they have the same content. In JavaScript, objects are compared by reference, not by value, so k and l are not considered equal because they do not reference the same object in memory.
+
+
+// //Stings
+
+
+// let str = "hello";
+// str[0] = "H";
+
+// console.log(str);
+
+// // Why no change?
+// // In JavaScript, strings are immutable, which means that once a string is created, it cannot be changed. When you try to change a character in the string using str[0] = "H", it does not modify the original string. Instead, it simply ignores the assignment and leaves the string unchanged. Therefore, when you log str, it still outputs "hello".
+
+// let strw = "JavaScript";
+
+// console.log(strw.slice(4, 10));
+
+
