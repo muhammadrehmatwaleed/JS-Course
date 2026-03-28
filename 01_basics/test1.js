@@ -288,3 +288,139 @@
 // console.log(strw.slice(4, 10));
 
 
+//++++++++++NUMS++++++++MATHS+++++++DATES+++++++TIMES+++++++++++++++
+//  Task15:
+// console.log(0.1 + 0.2);
+
+// 👉 Why not exactly 0.3? 
+// // The reason why 0.1 + 0.2 does not equal exactly 0.3 in JavaScript (and in many other programming languages) is due to the way floating-point numbers are represented in binary. In JavaScript, numbers are stored as 64-bit floating-point values, which can lead to precision issues when performing arithmetic operations with decimal numbers.
+
+// When you add 0.1 and 0.2, the result is not exactly 0.3 because the binary representation of these numbers cannot be represented with perfect precision. As a result, the sum of 0.1 and 0.2 is actually a number that is very close to 0.3, but not exactly equal to it, which is why you see a result like 0.30000000000000004 instead of 0.3.
+
+// Task16:
+// let num = 4.567;
+
+// console.log(num.toFixed(2));
+
+// Task17:
+   
+// console.log(Math.floor(Math.random() * 100) + 1); // Random number between 1 and 100
+
+
+// Task18:
+
+// let date = new Date();
+// console.log(date.getMonth());
+// // Why confusing?
+// The getMonth() method in JavaScript returns the month of the date as a zero-based index, which means that January is represented as 0, February as 1, and so on, up to December which is represented as 11. This can be confusing for developers who are used to thinking of months in a one-based format (where January is 1, February is 2, etc.). Therefore, when you call date.getMonth(), it may not return the expected month number if you are not aware of this zero-based indexing.
+
+
+// Task19:
+
+// let arr = [10, 50, 20];
+
+// console.log(Math.max(...arr)); // 50
+
+
+// Task20:
+
+// Find difference between two dates in days
+
+// let date1 = new Date('2020-01-01');
+// let date2 = new Date('2020-01-10');
+// let timeDifference = date2.getTime() - date1.getTime(); // Difference in milliseconds
+// let dayDifference = timeDifference / (1000 * 3600 * 24); // Convert milliseconds to days
+// console.log(dayDifference); // Output: 9
+
+
+// Task21:
+
+// Convert into seconds
+// let now = Date.now();
+// console.log(Math.floor(now / 1000)); // Current time in seconds since January 1, 1970
+
+
+
+// Task22:
+
+// let price = 123.456;
+// console.log(price.toFixed(2)); // Output: "123.46"
+
+
+
+// Task23:
+
+// Generate number 1–6
+
+// console.log(Math.floor(Math.random() * 6) + 1); // Random number between 1 and 6
+
+
+
+// Task24:
+
+// Generate 4-digit random OTP
+
+// console.log(Math.floor(1000 + Math.random() * 9000)); // Random 4-digit OTP between 1000 and 9999
+
+
+// Task25:
+
+// Calculate age using current year
+
+// let birthYear = 2000;
+// let currentYear = new Date().getFullYear();
+// let age = currentYear - birthYear;
+// console.log(age);
+
+
+// Task26:
+
+
+// Find days left until New Year
+
+// let newYear = new Date('2026-01-01');
+// let today = new Date();
+// let timeDifference = newYear.getTime() - today.getTime();
+// let daysLeft = Math.ceil(timeDifference / (1000 * 3600 * 24)); // Convert milliseconds to days and round up
+// console.log(daysLeft); // Output: Number of days left until New Year
+
+
+// Task27:
+
+// 👉 Output:
+// "10:05:09 PM"
+//  let date = new Date().toLocaleString();
+// console.log(date);
+
+
+
+// Task28:
+
+// 👉 Generate:
+
+// 8 characters
+// mix of numbers + letters
+
+// console.log(Math.random().toString(36).slice(-8)); // Generates a random 8-character string consisting of numbers and letters
+
+
+
+// Task29:
+
+// 👉 Input:
+// 10 seconds
+
+// 👉 Output:
+// Countdown in console
+
+// let countdown = 10;
+// let interval = setInterval(() => {
+//   console.log(countdown);
+//   countdown--;
+//   if (countdown < 0) {
+//     clearInterval(interval);
+//     console.log("Countdown finished!");
+//   }
+// }, 1000);
+
+
