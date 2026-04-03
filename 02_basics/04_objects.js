@@ -57,7 +57,48 @@ const user = [
 
 // console.log(user[0].firstName) // Accessing firstName of the first user in the array
 
-console.log(Object.keys(user[0])) // Getting all keys of the first user object
-console.log(Object.values(user[0])) // Getting all values of the first user object
-console.log(Object.entries(user[0])) // Getting all key-value pairs of the first user object as an array of arrays
-console.log(user[0].hasOwnProperty('email')) // Checking if the first user object has the 'email' property
+// console.log(Object.keys(user[0])) // Getting all keys of the first user object
+// console.log(Object.values(user[0])) // Getting all values of the first user object
+// console.log(Object.entries(user[0])) // Getting all key-value pairs of the first user object as an array of arrays
+// console.log(user[0].hasOwnProperty('email')) // Checking if the first user object has the 'email' property
+
+
+
+//object de structuring
+
+
+const course = {
+    courseName: 'JavaScript Basics',
+    courseDuration: '4 weeks',
+    courseInstructor: 'Rehmat Waleed',
+}
+
+const {courseName : name} = course // Destructuring the course object to extract properties into variables
+// console.log(courseName) // This will throw an error because courseName is not defined in the current scope
+console.log(name) // Output: JavaScript Basics
+
+
+// const navbar = ({company}) => {
+
+
+// }
+
+// navbar(company = "Google")
+
+
+//api intro
+
+// {
+//     "name": "Rehmat Waleed",
+//     "age": "21",
+//     "email": "rehmat@example.com"
+// }
+
+
+// [
+//     {},
+//     {},
+//     {}
+
+// ]
+
