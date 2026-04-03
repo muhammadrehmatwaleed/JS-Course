@@ -85,31 +85,96 @@
 // Mini Task
 //Add task Remove tasks Show tasks
 
-let todos = [
-    { id: 1, task: "Buy groceries", completed: false },
-    { id: 2, task: "Clean the house", completed: true },
-    { id: 3, task: "Pay bills", completed: false }
-];
+// let todos = [
+//     { id: 1, task: "Buy groceries", completed: false },
+//     { id: 2, task: "Clean the house", completed: true },
+//     { id: 3, task: "Pay bills", completed: false }
+// ];
 
-function addTask(task) {
-    const newTask = {
-        id: todos.length + 1,
-        task: task,
-        completed: false
-    };
-    todos.push(newTask);
+// function addTask(task) {
+//     const newTask = {
+//         id: todos.length + 1,
+//         task: task,
+//         completed: false
+//     };
+//     todos.push(newTask);
+// }
+
+// function removeTask(id) {
+//     todos = todos.filter(todo => todo.id !== id);
+// }
+
+// function showTasks() {
+//     console.log(todos);
+// }
+
+// addTask("Go for a walk");
+// removeTask(2);
+// showTasks();
+
+
+//Objects
+
+//Task1
+// let obj = { a: 1, b: 2 };
+// console.log(obj.b); // Output: 2
+
+//Task2
+// let user = { name: "Ali", age: 20 };
+// // Extract both
+// // name and age from the user object using destructuring assignment
+// let { name, age } = user;
+// console.log(name);
+// console.log(age);
+
+//Task3
+// let obj = {
+//   user: {
+//     name: "Ali"
+//   }
+// };
+
+// console.log(obj.user.name); // Output: "Ali"
+
+//Task4
+
+// let user = { name: "Ali" };
+// let { name } = user;
+
+// console.log(name);
+
+//Task5
+
+// Create object:
+// name, age, city
+const person = {
+    name: 'Rehmat',
+    age: 21,
+    city: 'Pakistan'
 }
 
-function removeTask(id) {
-    todos = todos.filter(todo => todo.id !== id);
+// Change age
+person.age = 22;
+
+// Extract all values
+
+console.log(Object.values(person)); // Output: ['Rehmat', 22, 'Pakistan']
+
+// Get city from nested object
+
+const user = {
+    name: 'Rehmat',
+    address: {
+        city: 'Pakistan'
+    }
 }
 
-function showTasks() {
-    console.log(todos);
-}
-
-addTask("Go for a walk");
-removeTask(2);
-showTasks();
-
-
+// Create function inside object
+const personWithFunction = {
+    name: 'Rehmat',
+    age: 22,
+    city: 'Pakistan',
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
