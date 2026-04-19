@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName) {
+            const li = document.createElement('li')
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').appendChild(li)
+        }
+        addLanguage('Python')
+        addLanguage('Java')
+
+        function addOptiLanguage(langName) {
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').append(li)
+        }
+        addOptiLanguage('C++')
+        addOptiLanguage('Go')
+
+        //Edit
+
+    const secondLanguage = document.querySelector("li:nth-child(2)")
+    // secondLanguage.innerHTML = 'Python 3.9'
+    const newText = document.createElement('li')
+    // newText.appendChild(document.createTextNode('Python 3.9'))
+    newText.textContent = 'Python 3.9'
+    secondLanguage.replaceWith(newText)
+
+    const thirdLanguage = document.querySelector("li:nth-child(3)")
+    thirdLanguage.outerHTML = '<li>Java 15</li>'
+
+    //Remove
+    const firstLanguage = document.querySelector("li:nth-child(1)")
+    firstLanguage.remove()
+    </script>
+</body>
+</html>
