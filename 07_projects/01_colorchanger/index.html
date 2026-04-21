@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changer</title>
+    <title>BMI Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="canvas">
-        <h1>Color Changer</h1>
-        <span class="button" id="grey"></span>
-        <span class="button" id="white"></span>
-        <span class="button" id="blue"></span>
-        <span class="button" id="yellow"></span>
-    
-    <h2>Try clicking on one of the color above one
-        <span>to change the background color of this page!</span>
-    </h2>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="text" id="height" /></p>
+        <p><label>Weight in KG: </label><input type="text" id="weight" /></p>
+        <button>Calculate</button>
+        <div id="results"></div>
+        <div id="weight-guide">
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
+        </div>
+      </form>
     </div>
-    <script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </body>
 </html>
