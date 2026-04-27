@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNC JS(settimeout,clearTimeout)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>MRW Tech</h1>
+    <button id="stop">Stop</button>
+
+
+    <script>
+        const sayRehmat = () => {
+            console.log("Rehmat");
+        }
+
+        const changeTitle = () => {
+            document.querySelector("h1").innerHTML = "MRW Tech - Updated";
+        }
+
+        const changeMe = setTimeout(changeTitle, 2000);
+
+        document.querySelector("#stop").addEventListener("click", () => {
+            clearTimeout(changeMe);
+            console.log("Title change stopped!");
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Set Interval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+    <script>
+            // const sayDate = (str) => {
+            //     console.log(str, Date.now());
+            // }
+
+            // const intervalId = setInterval(sayDate, 1000,"Current Time:");
+
+        const sayDate = (str) => {
+            console.log(str, new Date().toLocaleTimeString());
+        }
+
+        const intervalId = setInterval(sayDate, 1000,"Current Time:");
+        document.querySelector("#stop").addEventListener("click", () => {
+            clearInterval(intervalId);
+            console.log("Interval stopped!");
+        });
+
+        document.querySelector("#start").addEventListener("click", () => {
+            setInterval(sayDate, 1000,"Current Time:");
+            console.log("Interval started!");
+        });
+
+       
+    </script>
+</body>
+</html>
